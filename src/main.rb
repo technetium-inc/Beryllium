@@ -10,9 +10,7 @@ def main()
 	execute = Executor.new(file_content)
 
 	# start the execution
-	execute.start_execution()
+	execute.execute()
 end
 
-
 main()
-
