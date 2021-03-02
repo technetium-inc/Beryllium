@@ -1,15 +1,18 @@
 require_relative './arguments.rb'
+require_relative './execute.rb'
 
 
-# def execute tokens
-# end
+def main()
+	# get the splitted tokens
+	file_content = ArgumentParser.new(ARGV).start_argument_parsing()
 
-# def main
-#     execute lex readFile 
-# end
+	# create a new executor
+	execute = Executor.new(file_content)
 
-# main
+	# start the execution
+	execute.start_execution()
+end
 
-file_content = ArgumentParser.new(ARGV).start_argument_parsing()
 
-puts file_content
+main()
+

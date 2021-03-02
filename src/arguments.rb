@@ -4,6 +4,10 @@ class ArgumentParser
 		@command_arguments = command_arguments
 	end
 
+	# get the argument file name
+	# determine the length of the command arguments
+	# if length == 0, return nil(null)
+	# else, read the file and return the splitted string
 	def get_argument_file_name(command_arguments)
 		argument_length = command_arguments.length()
 
@@ -14,11 +18,17 @@ class ArgumentParser
 		end
 	end
 
+	# get the filename and evaluate the filename
+	# extension(the extension must be .brl)
 	def start_argument_parsing()
 		file_name = evaluate_file_name(get_argument_file_name(@command_arguments))
 		return get_specified_file_content(file_name)
 	end
 
+	# if the filename is nil, return nil
+	# else, check if the filename endswith .brl
+	# if yes, return the filename
+	# else, throw a runtime error
 	def evaluate_file_name(file_name)
 		if file_name != nil
 			if file_name.end_with?(".brl")
@@ -31,6 +41,9 @@ class ArgumentParser
 		end
 	end
 
+	# check if the file exists and the filename
+	# is a file(and not a directory), and read the 
+	# file, else throw a RuntimeError
 	def get_specified_file_content(file_name)
 		if File.exists?(file_name) and File.file?(file_name)
 			return File.open(file_name).read().split
