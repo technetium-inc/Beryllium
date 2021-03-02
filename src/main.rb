@@ -1,17 +1,18 @@
-def readFile
-    file = File.open(ARGV[0])
-    file.read()
+require_relative './arguments.rb'
+require_relative './execute.rb'
+
+
+def main()
+	# get the splitted tokens
+	file_content = ArgumentParser.new(ARGV).start_argument_parsing()
+
+	# create a new executor
+	execute = Executor.new(file_content)
+
+	# start the execution
+	execute.start_execution()
 end
 
-def lex code
-    code.split
-end
 
-def execute tokens
-end
+main()
 
-def main
-    execute lex readFile 
-end
-
-main
