@@ -51,4 +51,5 @@ class ArgumentParser
 			raise RuntimeError.new("Cannot read file #{file_name}")
 		end
 	end
+
 end
