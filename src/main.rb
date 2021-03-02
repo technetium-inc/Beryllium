@@ -1,13 +1,5 @@
 require_relative './arguments.rb'
 
-# def readFile
-#     file = File.open(ARGV[0])
-#     file.read()
-# end
-
-# def lex code
-#     code.split
-# end
 
 # def execute tokens
 # end
@@ -19,3 +11,5 @@ require_relative './arguments.rb'
 # main
 
 file_content = ArgumentParser.new(ARGV).start_argument_parsing()
+
+puts file_content

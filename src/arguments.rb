@@ -16,7 +16,7 @@ class ArgumentParser
 
 	def start_argument_parsing()
 		file_name = evaluate_file_name(get_argument_file_name(@command_arguments))
-		puts file_name
+		return get_specified_file_content(file_name)
 	end
 
 	def evaluate_file_name(file_name)
@@ -28,6 +28,14 @@ class ArgumentParser
 			end
 		else
 			return nil
+		end
+	end
+
+	def get_specified_file_content(file_name)
+		if File.exists?(file_name) and File.file?(file_name)
+			return File.open(file_name).read().split
+		else
+			raise RuntimeError.new("Cannot read file #{file_name}")
 		end
 	end
 end
