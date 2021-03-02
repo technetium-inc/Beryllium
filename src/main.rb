@@ -1,17 +1,19 @@
-def readFile
-    file = File.open(ARGV[0])
-    file.read()
-end
+require_relative 'arguments.rb'
 
-def lex code
-    code.split
-end
+# def readFile
+#     file = File.open(ARGV[0])
+#     file.read()
+# end
 
-def execute tokens
-end
+# def lex code
+#     code.split
+# end
 
-def main
-    execute lex readFile 
-end
+# def execute tokens
+# end
 
-main
+# def main
+#     execute lex readFile 
+# end
+
+# main
