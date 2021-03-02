@@ -1,4 +1,4 @@
-require_relative 'arguments.rb'
+require_relative './arguments.rb'
 
 # def readFile
 #     file = File.open(ARGV[0])
@@ -17,3 +17,5 @@ require_relative 'arguments.rb'
 # end
 
 # main
+
+file_content = ArgumentParser.new(ARGV).start_argument_parsing()
