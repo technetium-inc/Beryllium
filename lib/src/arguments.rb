@@ -49,6 +49,9 @@ class ArgumentParser
 	# is a file(and not a directory), and read the 
 	# file, else throw a RuntimeError
 	def get_specified_file_content(file_name)
+		if file_name == nil
+			exit
+		end
 		if File.exists?(file_name) and File.file?(file_name)
 			return File.open(file_name).read().split
 		else
