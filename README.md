@@ -21,6 +21,6 @@
  - When using the ```2+``` command, ```-``` and ```_``` as arguments print newline and space respectively
 
 ### Just for Fun
- Look: ***b***e***ry***lli***u***m
+ Look: [***b***e***ry***lli***u***m](https://en.wikipedia.org/wiki/Beryllium)
  
  R - U - B - Y spells ruby and beryllium is coded in pure ruby.
