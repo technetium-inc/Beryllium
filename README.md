@@ -1,4 +1,4 @@
-# Beryllium
+e# Beryllium
  This is getting excessive. YET ANOTHER ESOLANG.
 
 ## Syntax
